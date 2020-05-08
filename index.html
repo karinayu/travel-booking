@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book a travel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
     <link rel="stylesheet" href="./styles/index.css">
 </head>
 <body>
@@ -14,10 +15,9 @@
         </div>
         <nav>
             <ul class="nav-links">
-                <li class="links"><a href="#about">About</a></li>
-                <li class="links"><a href="#prices">Prices</a></li>
                 <li class="links"><a href="#faq">FAQ</a></li>
-                <li class="links"><a href="#contact">Contact us</a></li>
+                <li class="links"><a href="#book">Book now</a></li>
+                <li class="links"><a href="#contact">Contacts</a></li>
             </ul>
         </nav>
     </header>
@@ -28,17 +28,81 @@
             <p>Explore the world around you</p>
             <a href="#book">Book now</a>
         </div>
-        <div id="about" class="box">
-        </div>
-        <div id="prices" class="box">
-        </div>
         <div id="faq" class="box">
-        </div>
-        <div id="contact" class="box">
+            <p>FAQ</p>
+            <div class="questions">
+                <p class="question">Do I need to buy equipment?</p>
+                <p>You can buy equipment for yourself, but our company 
+                    fully provides every member with everything they need.
+                </p>
+            </div>
+            <div class="questions">
+                <p class="question">If I don't like a travel, can I 
+                    get a refund?</p>
+                <p>Yes, in case you're not satisfied with your travel, 
+                    you can contact us and we wiil give you 80% refund.
+                </p>
+            </div>
+            <div class="questions">
+                <p class="question">If I don't like a travel, can I 
+                    get a refund?</p>
+                <p>Yes, in case you're not satisfied with your travel, 
+                    you can contact us and we wiil give you 80% refund.
+                </p>
+            </div>
         </div>
         <div id="book" class="box">
-            <!-- here will be a form with input and submit-->
+            <div class="book">
+                <p>Book a travel</p>
+            </div>
+            <form>
+                <div>
+                    <i class="fas fa-address-card"></i>
+                    <input type="text" name="name" required placeholder="Name">
+                </div>
+                <div class="email">
+                    <i class="fas fa-envelope-open-text"></i>
+                    <input type="email" name="email" required placeholder="E-mail">
+                </div>
+                <div class="select">
+                    <select name="travel">
+                        <option value="Baikal">Travel to Baikal</option>
+                        <option value="Caucasus">Travel to Caucasus</option>
+                        <option value="Karelia">Travel to Karelia</option>
+                        <option value="Crimea">Travel to Crimea</option>
+                    </select>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <div id="contact" class="box">
+            <p class="name">Contact us</p>
+            <div class="wrapper">
+                <div class="location">
+                    <img src="./img/location-8.png" alt="">
+                </div>
+                <div class="contacts">
+                    <div>
+                        <p class="contact">Our e-mail</p>
+                        <p>bookatravel@gmail.com</p>
+                    </div>
+                    <div>
+                        <p class="contact">Our phone</p>
+                        <p>+79681832166</p>
+                    </div>
+                    <div>
+                        <p class="contact">Our adress</p>
+                        <p>509 East 80th Street, Moscow</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
+    <footer>
+        <div class="logo">
+            <img src="./img/logo.png">
+        </div>
+    </footer>
+    
 </body>
 </html>

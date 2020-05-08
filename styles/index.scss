@@ -1,4 +1,5 @@
 $primaryColor : #A872E0;
+$secondaryColor : #1C0040;
 html {
     scroll-behavior: smooth;
 }
@@ -17,6 +18,13 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+%clear-form {
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    border: none;
+    background: $secondaryColor;
+    color: #fff;
 }
 header {
     width: 100%;
@@ -55,6 +63,7 @@ header {
     }
 }
 main {
+    background-color: $secondaryColor;
     .banner {
         width: 100%;
         height: 110vh;
@@ -90,7 +99,140 @@ main {
     .box {
         width: 100%;
         height: 100vh;
-        background: #1C0040;
+        background: $secondaryColor;
+        @include flexPosition;
+        &#faq {
+            color: #fff;
+            font-size: 30px;
+            font-family: 'BebasBold';
+            letter-spacing: 5px;
+            width: 60%;
+            margin-left: 20%;
+            .questions {
+                font-family: 'BebasBook';
+                font-size: 20px;
+                @include flexPosition();
+                .question {
+                    font-family: 'BebasBold';
+                    font-size: 24px;
+                    color: $primaryColor;
+                }
+                p {
+                    text-align: center;
+                }
+            }
+        }
+        &#book {
+            .book {
+                font-size: 38px;
+                font-family: 'BebasBold';
+            }
+            @include flexPosition;
+            color: #fff;
+            form {
+                @include flexPosition;
+                width: 30%;
+                div {
+                    font-family: 'BebasBook';
+                    font-size: 24px;
+                    @extend %clear-form;
+                    padding-bottom: 30px;
+                    width: 100%;
+                    i {
+                        width: 30px;
+                        color: rgba(131, 131, 131, 0.795);        
+                    }
+                    input {
+                        @extend %clear-form;
+                        width:80%;
+                        font-family: 'BebasBook';
+                        border-bottom: 1px solid rgba(131, 131, 131, 0.795);
+                        &:focus {
+                            outline: none !important;
+                        }
+                    }
+                }
+                .select {
+                    @include flexPosition;
+                    position: relative;
+                    overflow: hidden;
+                    width: 250px;
+                    select {
+                        font-size: 30px;
+                        -webkit-appearance: none;
+                        -moz-appearance: none;
+                        appearance: none;
+                        outline: none;
+                        box-shadow: none;
+                        border: none;
+                        background-color: $secondaryColor;
+                        color: white;
+                        cursor: pointer;
+                        padding: 1rem;
+                        font-family: 'BebasBook';
+                        &:focus {
+                            outline: none !important;
+                        }
+                    }
+                    &::after {
+                        content: '\25BC';
+                        background: $secondaryColor;
+                        position: absolute;
+                        top: 15px;
+                        right: 20px;
+                        padding: 0.5rem;
+                        pointer-events: none;
+                        transition: all 0.3s ease;
+                    }
+                }   
+                button {
+                    @extend %clear-form;
+                    &:active, &:focus {
+                        outline: none !important;
+                    }
+                    color: #fff;
+                    font-size: 30px;
+                    background: $primaryColor;
+                    padding: 5px 30px;
+                    border-radius: 10px;
+                    font-family: 'BebasBold';
+                    cursor: pointer;
+                }
+            }
+        }
+        &#contact {
+            width: 60%;
+            margin-left: 20%;
+            .wrapper {
+                display: flex;
+                justify-content: space-around;
+                width: 100%;
+            }
+            color: white;
+            .name {
+                font-size: 30px;
+                font-family: 'BebasBold';
+            }
+            div {
+                .contact {
+                    font-size: 24px;
+                    font-family: 'BebasBold';
+                    color: $primaryColor;
+                }
+                p {
+                    font-size: 20px;
+                    font-family: 'BebasBook';
+                }
+            }
+        }
+    }
+}
+footer {
+    width: 100%;
+    height: 15vh;
+    background-color: $secondaryColor;
+    .logo {
+        @include flexPosition;
     }
 }
 @font-face {
